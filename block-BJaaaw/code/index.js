@@ -6,10 +6,36 @@
   - `if` the number is even print the message " number is even"
   - `if` the number is odd print the message "number is odd"
 */
-
+let number = prompt (Number("Enter a number: "));
+if(number % 2 == 0) {
+  alert("The number is even.");
+}
+else {
+    alert("The number is odd.");
+}
 // 2. Write a program to accept two numbers from user using`prompt` and alert the max value.
+num1 = prompt (Number("Input the First number"));
+num2 = prompt (Number("Input the second number"));
+                                                 
+if((num1) > (num2)) 
+  { 
+  alert ("num1 has max value")
+  }   
+else
+  if((num1) < (num2)) 
+  {
+  alert ("num2 has max value")
+  }       
 
 // 3. Convert the above code using`?` terniary operator
+num1 = prompt (Number("Input the First number"));
+num2 = prompt (Number("Input the second number"));
+
+num1 < num2 ?
+alert ("num1 has has value")
+:
+num1 > num2 
+alert ("num2 has max value")
 
 /*
 4. Write a program that asks the user for the house name and check the following conditions:
@@ -18,6 +44,19 @@
   - `if` house name is "lannister" then print the message " A lannister always pays his debt"
   - `else` print the message " All men must die"
 */
+let houseName = prompt ("Enter house name ?");
+if(houseName == stark) {
+ alert("Winter is coming");
+}
+else 
+if (houseName == lannister)
+ {
+    alert("A lannister always pays his debt");
+}
+else {
+  alert ("All men must die");
+}
+
 
 // 5. Convert the above code using`?` terniary operator
 
