@@ -6,47 +6,60 @@
 4. Now change the value of `user` to `John` and log the value of both `user` and `userName`.
 */
 
-{let user = prompt (`What is your name?`);
-  alert (`${user}`);
-}
+let user = prompt (`Enter your name?`);
+  alert (user);
+
 
 let userName = user;
-  console .log (`${user}, ${userName}`);
-let age = `22`; isLearning = `true`;
+console.log (user, userName);
 
-{let user = `John`;
-  console .log (`${user}, ${userName}`);
-}
+let age = 22, isLearning = true;
+
+user = `John`;
+console.log (user, "user", userName, "userName");
+
 
 /* 2.
 Use `prompt` to take two numbers from user and store it in variable `numA` and `numB`. Create a third variable called `sum`, using `+` operator add numA and numB , store it in varible `sum` and using alert display `sum` in browser.
 */
-let numA = Number (prompt (`Write the first number?`));
-let numB = Number (prompt (`Write the second number?`));
-let sum = (`${numA + numB}`);
-  alert (`${sum}`);
+let numA = Number (prompt (`Enter the first number`));
+let numB = Number (prompt (`Enter the second number`));
+let sum = numA + numB;
+  alert (sum);
 
 // Loops
 
 // 3. Complete the following code to make the output be 0 2 4 6 8 10?
 
-for (let j = 0; j <= 10; j++) {
-    if (j % 2 === 0) {
-        console.log(j)
-    } 
-}
+for (let j = 0; j <= 10; j += 2) {
+    console.log(j)
+} 
+
 
 // 4. Print the odd numbers from 9 to 1 (both inclusive) using a for loop.
-for (let j = 1; j <= 9; j++) {
+for (let j = 9; j >= 1; j--) {
     if (j % 2 !== 0) {
         console.log(j)
     } 
 }
 // 5. Concat all the numbers from 5 to 0 (both inclusive) in descending order using a while loop. (543210)
-for (let j = 0; j <= 5; j++) {
-    console.log(j);
+let finalString = "";
+let initialValue = 5;
+while (initialValue >= 0){
+    finalString += initialValue;
+    initialValue--;
 }
+console.log(finalString);
 // 6. Concat all the even numbers from 10 to 0 (both inclusive) in descending order using a while loop. (1086420)
+let finalEvenString = "";
+let initialEvenValue = 10;
+while (initialEvenValue >= 0){
+    if (initialEvenValue % 2 === 0) {
+        finalEvenString += initialEvenValue;
+    }
+    initialEvenValue--;
+}
+console.log(finalEvenString);
 
 // Comparisoin
 
@@ -65,14 +78,12 @@ Example:
 "hello", -21; // false
 
 */
-let num1 = (prompt (`Write the first input?`));
-let num2 = (prompt (`Write the second input?`));
+let num1 = +prompt (`Enter num one`)
+let num2 = +prompt (`Enter num two`);
 
-if (num1 == num2) {
-    alert(`True`);
-} else if (num1 != num2) {
-    alert(`false`)
+if (isNaN (num1) || isNaN (num2)) {
+    alert(`Enter a valid value`);
 } else {
-    alert(`Enter a valid value`)
+    alert (num1 === num2);
 }
 
