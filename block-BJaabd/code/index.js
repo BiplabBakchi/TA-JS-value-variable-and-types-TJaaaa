@@ -29,28 +29,14 @@ n = 1 => output: hello
 n = 7 => output: heeeeeeello
 👇
 */
-let n = +prompt(`Enter a number between 1 to 10`);
-  if (n == 1) {
-    alert(`helo`);
-  }else if (n == 2) {
-    alert(`heelo`);
-  } else if (n == 3) {
-    alert(`heeelo`);
-  } else if (n == 4) {
-    alert(`heeeelo`);
-  } else if (n == 5) {
-    alert(`heeeeelo`);
-  } else if (n == 6) {
-    alert(`heeeeeelo`);
-  } else if (n == 7) {
-    alert(`heeeeeeelo`);
-  } else if (n == 8) {
-    alert(`heeeeeeeelo`);
-  } else if (n == 9) {
-    alert(`heeeeeeeeelo`);
-  } else if (n == 10) {
-    alert(`heeeeeeeeeelo`);
-  } 
+let count = +prompt("Enter a message of e!")
+const start ="h";
+const end = "llo";
+let middle = "";
+for (let i = 0; i < count; i++){
+  middle += "e";
+}
+alert(start + middle + end);
 // [Your code goes here]
 
 /*
@@ -58,7 +44,8 @@ Program to calculate the sum of first n natural numbers(1,2,3...n are known as n
 👇
 */
 // [Your code goes here]
-let num = +prompt(`Enter a number`); let sum = 0;
+let num = +prompt(`Enter a number`); 
+let sum = 0;
 for (let i = 1; i <= num; i++) {
   sum += i;
 }
@@ -81,7 +68,7 @@ Take a number value from user and alert the message if it matches the conditions
 
 */
 // [Your code goes here]
-let nums = +prompt("Enter a number")
+let nums = +prompt("Enter a number between 1 to 10")
 switch (nums) {
   case 1:
     alert("ONE");
@@ -172,11 +159,11 @@ let num1 = +prompt(`Enter first integer`);
 let num2 = +prompt(`Enter first integer`);
 let num3 = +prompt(`Enter first integer`);
 let product = num1 * num2 * num3;
-if (product === product) {
-  alert("+ ");
+if (product > 0) {
+  alert("the final value is positive");
 }
-if (product === -product) {
-  alert("-");
+if (product < 0) {
+  alert("the final value is negative");
 }
 /* Calculator
  🎖Make a simple calculator with these functions. Using prompt, type conversion, if else statement. Use prompt to take the input from user i.e two numbers and an operation (Add, Sub, Mul, Div).
@@ -191,3 +178,23 @@ if (product === -product) {
 */
 
 // [Your code goes here]
+let firstNum = +prompt ("Enter first number");
+let secondNum = +prompt ("Enter second number");
+let operation = prompt ("Enter operation out of (Add, Sub, Mul, Div)");
+
+switch(operation) {
+  case "Add" :
+    alert(`The sum of ${firstNum} and ${secondNum} is ${firstNum + secondNum}`);
+    break;
+    case "Sub" :
+    alert(`The substraction of ${firstNum} and ${secondNum} is ${firstNum - secondNum}`);
+    break;
+    case "Mul" :
+    alert(`The multiplication of ${firstNum} and ${secondNum} is ${firstNum * secondNum}`);
+    break;
+    case "Div" :
+    alert(`The division of ${firstNum} and ${secondNum} is ${firstNum / secondNum}`);
+    break;
+    default: 
+    alert(`Enter a valid input`);
+}
